@@ -68,6 +68,40 @@
                 border-color: orange
             }
         }
+        .navbar-nav .nav-item .nav-link {
+        color: #444; /* Default text color */
+        font-size: 1.2rem;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        position: relative;
+        transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    }
+
+    .navbar-nav .nav-item .nav-link:hover {
+        color: #fff; /* Change text color on hover */
+        background: linear-gradient(90deg, #ff7e5f, #feb47b); /* Gradient hover effect */
+        border-radius: 20px; /* Rounded corners for the background */
+    }
+
+    .navbar-nav .nav-item .nav-link.link-hover::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #ff7e5f, #feb47b);
+        transition: all 0.3s ease-in-out;
+        transform: translateX(-50%);
+    }
+
+    .navbar-nav .nav-item .nav-link.link-hover:hover::after {
+        width: 100%;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 0 0.5rem;
+    }
     </style>
 </head>
 
@@ -84,23 +118,21 @@
 
             <!-- Collapsible wrapper -->
             <div class="collapse navbar-collapse" id="navbarRightAlignExample">
-                <!-- Left links -->
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item p-4">
-                        <a class="text-purple-400" aria-current="page" href="index.html">Home</a>
+                    <li class="nav-item">
+                        <a class="nav-link active link-hover" href="index.html">Home</a>
                     </li>
-                    <li class="nav-item p-4">
-                        <a class="text-dark" href="about.html">About Me</a>
+                    <li class="nav-item">
+                        <a class="nav-link link-hover" href="about.html">About Me</a>
                     </li>
-                    <li class="nav-item p-4">
-                        <a class="text-dark" href="skills.html">Skills</a>
+                    <li class="nav-item">
+                        <a class="nav-link link-hover" href="skills.html">Skills</a>
                     </li>
-                    <li class="nav-item p-4">
-                        <a class="text-dark" href="contact.html">Contact</a>
+                    <li class="nav-item">
+                        <a class="nav-link link-hover" href="contact.html">Contact</a>
                     </li>
                 </ul>
-                <!-- Left links -->
-            </div>
+            </div>            
             <!-- Collapsible wrapper -->
         </div>
         <!-- Container wrapper -->
